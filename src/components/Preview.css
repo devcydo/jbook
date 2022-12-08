@@ -9,6 +9,25 @@
   width: 100%;
 }
 
+.preview-error-container {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  color: red;
+  font-size: 16px;
+  font-family:Times, serif;
+}
+
+.preview-error-title {
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
 .react-draggable-transparent-selection .preview-wrapper::after {
   content: "";
   position: absolute;
