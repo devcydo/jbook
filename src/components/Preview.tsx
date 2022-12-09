@@ -10,7 +10,10 @@ interface PreviewProps {
 const html = `
 <html>
   <head>
-    <style>html { background-color: #fff }</style>
+    <style>
+      html { background-color: #fff }
+      #root { min-height: 100vh }
+    </style>
   </head>
   <body>
     <div id="root"></div>
