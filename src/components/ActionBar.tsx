@@ -1,4 +1,7 @@
+import "./ActionBar.css"
+
 import { useActions } from "../hooks/useActions";
+import ActionButton from "./ActionButton";
 interface ActionBarProps {
   id: string;
 }
@@ -6,11 +9,13 @@ interface ActionBarProps {
 const ActionBar: React.FC<ActionBarProps> = ({ id }) => {
   const { moveCell, deleteCell } = useActions();
 
-  return <div>
-    <button onClick={() => moveCell(id, 'up')}>Up</button>
-    <button onClick={() => moveCell(id, 'down')}>Down</button>
-    <button onClick={() => deleteCell(id)}>Delete</button>
-  </div>
+  return (
+    <div className="action-bar">
+      <ActionButton onClick={() => moveCell(id, 'up')} icon="fa-arrow-up" />
+      <ActionButton onClick={() => moveCell(id, 'down')} icon="fa-arrow-down" />
+      <ActionButton onClick={() => deleteCell(id)} icon="fa-times" />
+    </div>
+  );
 };
 
 export default ActionBar;
